@@ -1,4 +1,0 @@
-min_num=1
-max_num=41
-unexpect_num=0
-refresh_time=100

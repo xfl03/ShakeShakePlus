@@ -11,17 +11,16 @@ public class DisplayEventHandlerThread extends Thread {
 		shakeshakeplus=mainFrame;
 	}
 	
-	@SuppressWarnings("static-access")
 	@Override
 	public void run(){
-		while(!Display.isCloseRequested()){
+		//while(!Display.isCloseRequested()){
+		while(true){
 			try{
 			if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)||Mouse.isButtonDown(0)){
 				shakeshakeplus.play=!shakeshakeplus.play;
-				try {
-					this.sleep(200);
-				} catch (InterruptedException e) {
-					ExceptionHandler.log(e);
+				while(!Display.isCloseRequested()&&
+						(Keyboard.isKeyDown(Keyboard.KEY_SPACE)||Mouse.isButtonDown(0))){
+					
 				}
 			}
 			}catch(Exception e){

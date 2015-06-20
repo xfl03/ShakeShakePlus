@@ -56,10 +56,10 @@ public class DisplayRandom {
            
            // draw quad
            GL11.glBegin(GL11.GL_QUADS);
-               GL11.glVertex2f(10,10);//左上
-               GL11.glVertex2f(272,10);//右上
-               GL11.glVertex2f(272 ,152);//右下
-               GL11.glVertex2f(10,152);//左下
+               GL11.glVertex3f(10,10,100);//左上
+               GL11.glVertex3f(272,10,100);//右上
+               GL11.glVertex3f(272 ,152,-100);//右下
+               GL11.glVertex3f(10,152,-100);//左下
            GL11.glEnd();
            //System.out.println(mainFrame.rrr);
            bb.showint(mainFrame.rrr);
